@@ -32,7 +32,7 @@ export class Settings {
             windowsFileExtensions: ["lnk"],
             windowsFolders: [
                 "C:\\ProgramData\\Microsoft\\Windows\\Start Menu",
-                join(this.app.getPath("home"), "AppData", "Roaming", "Microsoft", "Windows", "Start Menu"),
+                join("$env:APPDATA", "Microsoft", "Windows", "Start Menu"),
             ],
             linuxFolders: (
                 this.environmentVariableProvider.get("XDG_DATA_DIRS") ||
